@@ -185,11 +185,11 @@ class GitRepository:
 
     def diff(self, a=None, b=None, cached=False, path_filter=None) -> Diff:
         if isinstance(a, pygit.Commit):
-            a_str = a.hex
+            a_str = str(a.id)
         else:
             a_str = str(a)
         if isinstance(b, pygit.Commit):
-            b_str = b.hex
+            b_str = str(b.id)
         else:
             b_str = str(b)
         self._logger.info('{} {} {} {}'.format(a_str, b_str, cached, path_filter))

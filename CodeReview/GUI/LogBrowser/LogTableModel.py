@@ -118,7 +118,7 @@ class LogTableModel(QtCore.QAbstractTableModel):
         return (
             self._number_of_rows - i -1,
             tag_name + commit.message.strip(),
-            str(commit.hex),
+            str(commit.id),
             fromtimestamp(commit.commit_time).strftime('%Y-%m-%d %H:%M:%S'),
             '{} <{}>'.format(committer.name, committer.email),
 

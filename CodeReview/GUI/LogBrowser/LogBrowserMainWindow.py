@@ -398,12 +398,12 @@ class LogBrowserMainWindow(MainWindowBase):
             log_table_model = self._application.log_table_model
             self._current_commit = log_table_model[index]
 
-            sha = self._current_commit.hex
+            sha = str(self._current_commit.id)
             self._commit_sha.setText('Commit: {}   /   {}'.format(sha[:self.SHA_SHORTCUT_LENGTH], sha))
             if len(self._current_commit.parents) > len(self._parent_labels):
                 self.show_message('Fixme: More than 2 parents')
             for commit, parent_label in zip(self._current_commit.parents, self._parent_labels):
-                parent_label.setText('Parent: {}   ({})'.format(commit.hex[:self.SHA_SHORTCUT_LENGTH], commit.message))
+                parent_label.setText('Parent: {}   ({})'.format(str(commit.id)[:self.SHA_SHORTCUT_LENGTH], commit.message))
                 parent_label.setCursorPosition(0)
 
             self._review_note = self._application.review[sha]
