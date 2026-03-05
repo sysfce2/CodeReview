@@ -1,7 +1,9 @@
-# source /opt/python-virtual-env/py310/bin/activate
-source /opt/python-virtual-env/codereview/bin/activate
+source .venv/bin/activate
 
-# append_to_ld_library_path_if_not /usr/local/lib
-# append_to_ld_library_path_if_not /usr/local/stow/libgit2-27/lib
+# PYTHONPYCACHEPREFIX
+#   If this is set, Python will write .pyc files in a mirror directory tree at this path,
+#   instead of in __pycache__ directories within the source tree.
+#   This is equivalent to specifying the -X pycache_prefix=PATH option.
+export PYTHONPYCACHEPREFIX=$PWD/.pycache
 
-append_to_python_path_if_not ${PWD}
+# append_to_python_path_if_not ${PWD}
