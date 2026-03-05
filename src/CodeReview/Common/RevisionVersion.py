@@ -36,7 +36,7 @@ class RevisionVersion:
     def __init__(self, version):
 
         if isinstance(version, str):
-            match = re.match('v([0-9]+)\.([0-9]+)\.([0-9]+)(-.*)?', version)
+            match = re.match(r'v([0-9]+)\.([0-9]+)\.([0-9]+)(-.*)?', version)
             if match is not None:
                 groups = match.groups()
                 self.major, self.minor, self.revision = [int(x) for x in groups[:3]]
