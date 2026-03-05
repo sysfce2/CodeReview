@@ -110,6 +110,7 @@ class GitRepository:
 
     @property
     def repository_status(self):
+        # can raise UnicodeDecodeError
         return self._repository.status()
 
     @property
