@@ -1,4 +1,5 @@
 *~
+.pycache
 __pycache__
 .directory
 
@@ -15,14 +16,16 @@ dist/
 doc/sphinx/build/
 doc/sphinx/source/api/
 
-CodeReview/GitHub/code/
-CodeReview/PatienceDiff/_patiencediff_c.cpython-310-x86_64-linux-gnu.so
-CodeReview/PatienceDiff/_patiencediff_c.cpython-38-x86_64-linux-gnu.so
-CodeReview/QmlApplication/rcc/CodeReviewRessource.py
-CodeReview/QmlApplication/rcc/code-review.rcc
-CodeReview/TextDistance/buggy.c
-CodeReview/ovh.txt
-CodeReview/share/icons/copy-icons.sh
+src/CodeReview/GitHub/code/
+src/CodeReview/QmlApplication/rcc/CodeReviewRessource.py
+src/CodeReview/QmlApplication/rcc/code-review.rcc
+src/CodeReview/TextDistance/buggy.c
+src/CodeReview/ovh.txt
+src/CodeReview/share/icons/copy-icons.sh
+
+src/CodeReview/PatienceDiff/_patiencediff_c.cpython-314-x86_64-linux-gnu.so
+src/CodeReview/TextDistance/levenshtein_distance_c.cpython-314-x86_64-linux-gnu.so
+src/code_review.egg-info/
 
 doc/IDEA.md
 doc/git-gui.md
